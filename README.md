@@ -1,6 +1,9 @@
 js-boilerplate
 ==============
 
+[![Build Status](https://travis-ci.org/dasilvacontin/js-boilerplate.svg?branch=master)](https://travis-ci.org/dasilvacontin/js-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/dasilvacontin/js-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dasilvacontin/js-boilerplate?branch=master)
+
 This repo serves as a boilerplate for my JavaScript projects. Feel free to use, improve and discuss!
 
 It comes setup with:
