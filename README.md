@@ -1,3 +1,5 @@
+![weird jetocat](http://i.imgur.com/nuksonR.png)
+
 js-boilerplate
 ==============
 
