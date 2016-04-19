@@ -6,4 +6,3 @@ node_js:
   - 5
 
 script: npm run ci
-  - npm run coverage && cat ./coverage/lcov.info | coveralls

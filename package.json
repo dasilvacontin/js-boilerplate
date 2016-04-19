@@ -11,11 +11,10 @@
     "typecheck": "flow",
     "pretest": "npm run lint && npm run typecheck",
     "test": "mocha --compilers js:babel-register",
-    "pretest:ci": "npm run pretest",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-register",
-    "test:ci": "dot-only-hunter && npm run coverage && cat ./coverage/lcov.info | coveralls",
+    "ci": "dot-only-hunter && npm run coverage && cat ./coverage/lcov.info | coveralls",
     "build": "babel src --out-dir .",
-    "prepublish": "npm test && npm run build"
+    "prepublish": "npm run build"
   },
   "author": "David da Silva <dasilvacontin@gmail.com>",
   "license": "MIT",
