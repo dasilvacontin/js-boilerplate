@@ -24,6 +24,7 @@
     "lodash": "^4.11.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.7.5",
     "babel-eslint": "^6.0.2",
     "babel-plugin-lodash": "^2.3.0",
     "babel-plugin-syntax-flow": "^6.5.0",
