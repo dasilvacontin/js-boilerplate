@@ -1,27 +1,25 @@
 // @flow
-import _ from 'lodash'
-import { readFile } from 'fs'
-import { promisify } from 'bluebird'
-const readFileAsync = promisify(readFile)
+const fs = require('fs')
+const promisify = require('es6-promisify')
+const readFile = promisify(fs.readFile)
 
 function sleep (ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 export async function listWords (files: Array<string>) {
-  let promises = files.map(filename => readFileAsync(filename))
+  let promises = files.map(filename => readFile(filename))
   let buffers = await Promise.all(promises)
-  let wordsPerFile = buffers.map(_.words)
-  let words = _.union.apply(_, wordsPerFile)
+  let wordsPerFile = buffers.map(file => {
+    return file.toString()
+    .replace(/[^\w\s]|_/g, '') // replace non-alphanumeric chars
+    .match(/\S+/g) // split grouping non-whitespace
+  })
+  let words = wordsPerFile.reduce((all, words) => all.concat(words), [])
+  words = Array.from(new Set(words)) // make array elements unique
   words = words.filter(word => word.match(/\D/)) // filter out numbers
   return words
 }
-
-// until https://phabricator.babeljs.io/T7295 gets fixed!
-Object.defineProperty(exports, '__esModule', {
-  value: true
-})
-exports.default = listWords
 
 export async function fun () {
   console.log('hello')

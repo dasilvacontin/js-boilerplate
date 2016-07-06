@@ -1,5 +1,6 @@
 import expect from 'unexpected'
-import listWords from '../src/lib'
+import { listWords } from '../src/lib'
+import { describe, it } from 'mocha'
 
 describe('list-words', () => {
   it('should return a promise', () => {

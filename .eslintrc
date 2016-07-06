@@ -1,12 +1,14 @@
 {
   "parser": "babel-eslint",
   "plugins": [
+    "babel",
     "flow-vars"
   ],
   "extends": ["standard"],
   "rules": {
-  "arrow-parens": [2, "as-needed"],
-    "flow-vars/define-flow-type": 1,
-    "flow-vars/use-flow-type": 1
+    "generator-star-spacing": 0,
+    "babel/generator-star-spacing": [2, "before"],
+    "flow-vars/define-flow-type": 2,
+    "flow-vars/use-flow-type": 2
   }
 }
