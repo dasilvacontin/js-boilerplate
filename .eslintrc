@@ -9,6 +9,8 @@
     "generator-star-spacing": 0,
     "babel/generator-star-spacing": [2, "before"],
     "flow-vars/define-flow-type": 2,
-    "flow-vars/use-flow-type": 2
+    "flow-vars/use-flow-type": 2,
+    "promise/catch-or-return": 2,
+    "promise/always-return": 2
   }
 }
